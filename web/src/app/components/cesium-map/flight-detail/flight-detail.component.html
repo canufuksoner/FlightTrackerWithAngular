@@ -1,0 +1,13 @@
+<div class="p-4 bg-white shadow-md rounded-lg">
+    <h2 class="text-xl font-semibold mb-2">Flight Details</h2>
+  
+    <div *ngIf="selectedEntity; else noSelection">
+      <p><strong>Name:</strong> {{ selectedEntity.name }} </p>
+      <p><strong>Flight Id:</strong> {{ selectedEntity.id }}</p>
+    </div>
+  
+    <ng-template #noSelection>
+      <p class="text-gray-500">Flight not selected</p>
+    </ng-template>
+  </div>
+  

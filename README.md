@@ -5,7 +5,7 @@ This project demonstrates a full-stack application using Node.js, Angular, Tailw
 1. Clone the repository
 2. Navigate to the backend directory: `cd backend`
 3. Install backend dependencies: `npm install`
-4. Navigate to the frontend directory: `cd ../frontend`
+4. Navigate to the frontend directory: `cd ../web`
 5. Install frontend dependencies: `npm install`
 
 ## Running the Application

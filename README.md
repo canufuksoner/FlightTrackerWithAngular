@@ -10,5 +10,5 @@ This project demonstrates a full-stack application using Node.js, Angular, Tailw
 
 ## Running the Application
 
-1. Start the backend server: `cd ../backend && node server.js`
-2. In a separate terminal, start the Angular development server: `cd ../web && ng serve`
+1. Start the backend server: `cd backend && node server.js`
+2. In a separate terminal, start the Angular development server: `cd web && ng serve`

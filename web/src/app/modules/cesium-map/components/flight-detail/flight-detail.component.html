@@ -1,0 +1,21 @@
+<div class="p-4 bg-white shadow-md rounded-lg flex flex-col">
+  <app-logout-button></app-logout-button>
+
+  <h2
+    class="text-xl font-semibold mb-2 mt-4"
+    [ngClass]="{ 'text-red-500': !selectedEntity }"
+  >
+    Flight Details
+  </h2>
+
+  <div *ngIf="selectedEntity; else noSelection" class="mt-2">
+    <p><strong>Name:</strong> {{ selectedEntity.name }}</p>
+    <p>
+      <strong>Flight Id:</strong> {{ selectedEntity.flightId | maskString }}
+    </p>
+  </div>
+
+  <ng-template #noSelection>
+    <p class="text-gray-500 mt-2">Flight not selected</p>
+  </ng-template>
+</div>

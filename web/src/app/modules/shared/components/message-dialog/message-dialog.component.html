@@ -1,0 +1,17 @@
+<div class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+    <div class="bg-red-600 text-white p-6 rounded-lg shadow-lg text-center">
+      <p class="text-xl font-bold mb-4">{{ title }}</p>
+      <p class="mb-4">{{ message }}</p>
+      <div *ngIf="showButtons" class="flex justify-center space-x-4">
+        <button (click)="confirm.emit()" class="bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-gray-200">
+          {{ confirmButtonText }}
+        </button>
+        <button (click)="cancel.emit()" class="bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-gray-200">
+          {{ cancelButtonText }}
+        </button>
+      </div>
+      <button *ngIf="!showButtons" (click)="close()" class="bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-gray-200">
+        Close
+      </button>
+    </div>
+  </div>

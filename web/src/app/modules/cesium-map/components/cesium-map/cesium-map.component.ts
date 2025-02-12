@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import * as Cesium from 'cesium';
 import { CesiumService } from '../../services/cesium.service';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-cesium-map',
@@ -26,7 +26,7 @@ export class CesiumMapComponent implements OnInit, AfterViewInit, OnDestroy {
 
     const viewer = this.cesiumService.initCesium(this.cesiumContainer.nativeElement);
     this.cesiumService.addEntity();
-    this.cesiumService.startWebSocket('ws://localhost:8080');
+    this.cesiumService.startWebSocket(environment.wsUrl);
     this.cesiumService.enableClickHandler();
   }
 
